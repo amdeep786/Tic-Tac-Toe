@@ -1,0 +1,43 @@
+#include "cpuvscpumodel.h"
+#include "Player.h"
+
+#include <iostream>
+#include <string>
+#include <time.h>
+
+class CpuVsCpuController{
+public:
+
+    CpuVsCpuController();
+    ~CpuVsCpuController();
+
+    void setCurrentPlayers(unsigned long index1, unsigned long index2);
+
+    void doStep();
+
+    void doReset();
+
+    void reversePlayers();
+
+    bool is_in_tournament();
+
+    void print_board();
+
+private:
+
+    CpuVsCpuModel *gameModel;
+
+    bool in_tournament;
+
+    void setup_taken_square(int square);
+
+    void show_singlegame_Result(int status, int winner);
+
+    bool checkWhoWon();
+
+
+    void setMarkOnField(int field);
+
+
+protected:
+};
