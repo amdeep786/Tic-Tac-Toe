@@ -1,69 +1,61 @@
-Tic-Tac-Toe is a simple game for two players. The game involves 2 players placing
-their respective symbols in a 4x4 grid with 16 square fields. In this project two
-"AI’s" compete against each other in an extended version of the game Tic-Tac-
-Toe. At the beginning of the game one square is blacked out and can not be used
-by either one of the players. In alternating turns the AI’s mark one square with
-either an X or an O, trying to achieve "four-in-a-row" and win the game. The
-player who manages to place four of their symbols in horizontal/vertical/diagonal
-row wins the game. If either player fails to do so the game ends in a draw. If both
-the people always play their optimal strategies the game always ends in a draw. The
-figure below shows the depiction of how the Tic Tac Toe game is being played
-between the two AI’s in the project.
-Overall Description
-As the grid is small & there are only two players involved the number of possible
-moves for every board state is limited thus allowing Tree-based search algorithms
-like Alpha-Beta pruning or Minimax Algorithm to provide a computationally
-feasible & exact solution to building a AI-based Tic-Tac-Toe player. In this project,
-we look at Minimax Algorithm to the same game.
-Like a professional chess player, this algorithm takes into account a few steps
-ahead and puts itself in the shoes of its opponent. It keeps playing ahead until it
-reaches a terminal arrangement of the board (terminal state) resulting in a tie, a
-win, or a loss. Every board state has a value associated with it Once in a terminal
-state, the AI will assign an arbitrary positive score (+1) for a win, a negative score
-(-1) for a loss, or a neutral score (0) for a tie. At the same time, the algorithm
-evaluates the moves that lead to a terminal state based on the players’ turn. It will
-choose the move with maximum score when it is the AI’s turn and choose the
-move with the minimum score when it is the other player’s turn. Using this
-strategy, Minimax avoids losing to the other player.
-Minimax is a backtracking algorithm that is used in decision making and game
-theory to find the optimal move for a player, assuming that your opponent also
-plays optimally, which means that the terminal level nodes are analyzed and
-values are calculated that are then propagated to the root node and then the
-decision regarding the selection of the node is carried out. In Minimax the two
-players are called maximizer and minimizer. The maximizer tries to get the
-highest score possible while the minimizer tries to do the opposite and get the
-lowest score possible.
-System Features
-In this project the AI player that has been designed in order to win over the other
-player. The following functions have been deployed in order to optimize the
-winning of the AI player:
-The function we have is Check, which is basically a function to check when a
-player has won the game. It takes into account all possibilities by which a player
-can win this game. It checks the following conditions associated with winning
-this Tic Tac Toe game :
-1. This will check the status of the field of the tic tac toe game board in
-the horizontal direction, that is it will take into account all the 4 rows
-present in the 4*4 matrix.
-2. This will check the status of the field of the tic tac toe game board in
-the vertical direction, that is it will take into account all the 4 coloumns
-present in the 4*4 matrix.
-3. This will check the status of the field of the tic tac toe game board
-among the diagonals, that is it will take into account the 2 diagonals
-present.
-4. This will take into account in case there's a draw between the players.
-The next and foremost important function is the Minimax, in which the
-algorithm is being deployed, in order to find the next optimal move for the
-player. The first and foremost task that is being carried out is to find the current
-status of the particular field in the board, i.e is it winning, losing or there’s a
-draw. Then the maximize segment of the Minimax algorithm comes into action
-which will try to get the highest score possible and maximize the chances of
-winning of the player, followed by the min segment of the Minimax algorithm
-which will try to get the lowest score possible and minimize the chances of
-winning of the other player.
-The function next in line is the corner one. It takes into account the corner values
-in the grid and deploy the values in a manner so that the AI player wins. As in
-general, the corner values in a tic tac toe game plays a striking role in deciding
-the winning player, thus it lays down the logic to cover all these values.
-Last but not the least is the getNextMove function, that will decide the next
-move to be taken by the AI player, as per the analysis that has been carried out
-by the Minimax Algorithm.
+# Security-System Using Arduino
+
+The security system is used to monitor a door or window and would determine, whether the door/window is closed or opened by using laser sensor. In order to alter the states, a pin must be entered using a number pad. Additionally, there is a display which shows the current state of the door/window.
+
+1.FUNCTIONAL REQUIREMENTS
+
+1.1	Summary of Functions
+The Security System requires a embedded system based solution for a program whose primary functions are to:  
+•	Monitor a door or window  
+•	Determine the opened/closed state of the system  
+•	Take necessary steps in both opened/closed state  
+
+1.2	Functional Requirements  
+In order to accomplish the above articulated needs, the Security System requires the following functionality:  
+
+1.2.1 Status Management  
+  •	Indication of the current state of the door/window  
+  •	Ability to switch between states “open” and “closed”  
+
+1.2.2 Alarm System Management  
+  •	Indication of the current state of the alarm system   
+  •	Ability to control the alarm system by using passwords  
+  •	Make alarm sound while someone trying to break into the door/window in “closed” state  
+ 
+
+2.NON-FUNCTIONAL REQUIREMENTS
+
+2.1 System Security  
+  •	The embedded system hardware design should fulfil the needs of system safety    
+  •	Use of sustainable hardware components   
+  •	Safe power supply for the system  
+  •	Safe operation in components and wire connection  
+
+2.2 The software programming should fulfil the need of system safety  
+  •	Data encryption when using password function  
+  •	Reliable coding to ensure the functionality of the system  
+
+2.3 System Complexity  
+  •	Reducing of the total number of wires/components when possible  
+  •	Optimization of the system by using different components  
+
+
+3.DETAILED EXPLANATION OF THE DESIGN
+
+•	Keypad & LCD1602: used for entering password in order to change between “opened” and “closed” states  
+•	Speaker: make alarm sound when moving objects passing through under “opened” state  
+•	Light sensor & Laser emmitter: detect moving objects passing through   
+
+
+4.HARDWARE REQUIREMENTS 	  
+
+•	LCD Display   
+•	Number keypad   
+•	Breadboard  
+•	Arduino Uno  
+• Speaker  
+•	Wires  
+•	Light sensor  
+•	Laser emitter   
+•	Resistor
+
