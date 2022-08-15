@@ -1,6 +1,6 @@
-# Security-System Using Arduino
+# TIC TAC TOE Game
 
-The security system is used to monitor a door or window and would determine, whether the door/window is closed or opened by using laser sensor. In order to alter the states, a pin must be entered using a number pad. Additionally, there is a display which shows the current state of the door/window.
+Tic-Tac-Toe is a simple game for two players. The game involves 2 players placing their respective symbols in a 4x4 grid with 16 square fields. 
 
 1.FUNCTIONAL REQUIREMENTS
 
