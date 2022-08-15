@@ -1,4 +1,4 @@
-# TIC TAC TOE Game
+## TIC TAC TOE Game
 
 Tic-Tac-Toe is a simple game for two players. The game involves 2 players placing their respective symbols in a 4x4 grid with 16 square fields. 
 
